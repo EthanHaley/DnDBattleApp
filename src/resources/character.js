@@ -87,7 +87,7 @@ function update(req, res, db) {
 	req.on("end", function() {
 		var character = JSON.parse(body);
 		db.run("UPDATE characters SET name=?, strength=?, dexterity=?, constitution=?, intelligence=?, wisdom=?, charisma=?, ac=?, speed=?, hpMax=? WHERE id=?",
-			[character.name, character.strength, character.dexterity, character.constitution, character.intelligence, character.wisdom, character.charisma, character.ac, character.speed, character.hpMax, id],
+			[character.name, character.str, character.dex, character.con, character.int, character.wis, character.char, character.ac, character.speed, character.hpMax, id],
 			function(err) {
 				if(err) {
 					console.error(err);

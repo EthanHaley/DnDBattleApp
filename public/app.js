@@ -125,38 +125,40 @@ function loadCharacter(url) {
 }
 
 function showForm() {
-	$('body').load('/character-form.html');
-	$(function() {
-		$('#character-form').on('submit', function(event) {
-			event.preventDefault();
-			var character = {}
-			$.each($('#character-form :input').serializeArray(), function() {
-				character[this.name] = this.value;
-			})
-			var xhr = new XMLHttpRequest();
-			xhr.open('POST', '/characters');
-			xhr.setRequestHeader('Content-Type', 'application/json');
-			xhr.send(JSON.stringify(character));
-			loadIndex();
+	$('body').load('/character-form.html', function() {
+		$(function() {
+			$('#character-form').on('submit', function(event) {
+				event.preventDefault();
+				var character = {}
+				$.each($('#character-form :input').serializeArray(), function() {
+					character[this.name] = this.value;
+				})
+				var xhr = new XMLHttpRequest();
+				xhr.open('POST', '/characters');
+				xhr.setRequestHeader('Content-Type', 'application/json');
+				xhr.send(JSON.stringify(character));
+				loadIndex();
+			});
 		});
 	});
 }
 
 function editForm(character) {
 	charId = character.id;
-	$('body').load('/edit-form.html');
-	$(function() {
-		$('edit-form').on('submit', function(event) {
-			event.preventDefault();
-			var character = {}
-			$.each($('#edit-form :input').serializeArray(), function() {
-				character[this.name] = this.value;
-			})
-			var xhr = new XMLHttpRequest();
-			xhr.open('POST', '/characters/' + charId);
-			xhr.setRequestHeader('Content-Type', 'application/json');
-			xhr.send(JSON.stringify(character));
-			loadIndex();
+	$('body').load('/edit-form.html', function() {
+		$(function() {
+			$('#edit-form').on('submit', function(event) {
+				event.preventDefault();
+				var character = {}
+				$.each($('#edit-form :input').serializeArray(), function() {
+					character[this.name] = this.value;
+				})
+				var xhr = new XMLHttpRequest();
+				xhr.open('POST', '/characters/' + charId);
+				xhr.setRequestHeader('Content-Type', 'application/json');
+				xhr.send(JSON.stringify(character));
+				loadIndex();
+			});
 		});
 	});
 }

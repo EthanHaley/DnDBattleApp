@@ -16,10 +16,10 @@ db.run(
 	"(id INTEGER PRIMARY KEY, name TEXT NOT NULL, strength INTEGER NOT NULL, dexterity INTEGER NOT NULL, constitution INTEGER NOT NULL, intelligence INTEGER NOT NULL, wisdom INTEGER NOT NULL, charisma INTEGER NOT NULL, ac INTEGER NOT NULL, speed INTEGER NOT NULL, hpMax INTEGER NOT NULL);"
 );
 
-/*migrate(db, 'migrations', function(err) {
+migrate(db, 'migrations', function(err) {
 	if(err) console.error(err);
 	else console.log("Migrations complete");
-});*/
+});
 
 var router = new (require('./lib/route')).Router(db);
 

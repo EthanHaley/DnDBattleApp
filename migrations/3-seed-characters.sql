@@ -1,2 +1,2 @@
 INSERT INTO characters (name, strength, dexterity, constitution, intelligence, wisdom, charisma, ac, speed, hpMax)
-VALUES ("Zemnyx", 5, 13, 15, 7, 13, 19, 15, 30, 81);
+VALUES ("Drow Elite Warrior", 13, 18, 14, 11, 13, 12, 18, 30, 71);
