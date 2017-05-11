@@ -1,0 +1,25 @@
+{
+  "name": "dndbattleapp",
+  "version": "1.0.0",
+  "description": "Web app for managing Dungeons and Dragons player characters and NPC monsters, and more easily create/run battles in the game.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EthanHaley/DnDBattleApp.git"
+  },
+  "keywords": [
+    "dnd"
+  ],
+  "author": "Ethan Haley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EthanHaley/DnDBattleApp/issues"
+  },
+  "homepage": "https://github.com/EthanHaley/DnDBattleApp#readme",
+  "dependencies": {
+    "sqlite3": "^3.1.8"
+  }
+}

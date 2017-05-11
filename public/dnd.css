@@ -1,0 +1,147 @@
+body {
+	background-color: #6b6a68;
+}
+
+input {
+	width: 50%;
+	padding: 10px;
+	margin: auto;
+	font-family: "Arial Black", Gadget, sans-serif;
+
+}
+
+#title {
+	font-family: "Arial Black", Gadget, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	text-decoration: underline;
+}
+
+#form-div {
+	width: 30%;
+	background-color: black;
+	color: white;
+	text-align: right;
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#str {
+	width: 50%;
+	display: inline-block;
+}
+
+#dex {
+	display: inline-block;
+	width: 50%;
+}
+#con {
+	display: inline-block;
+	width: 50%;
+}
+#int {
+	display: inline-block;
+	width: 50%;
+}
+#wis {
+	display: inline-block;
+	width: 50%;
+}
+#char {
+	display: inline-block;
+	width: 50%;
+}
+#ac {
+	display: inline-block;
+	width: 50%;
+}
+#speed {
+	display: inline-block;
+	width: 50%;
+}
+#hpMax {
+	display: inline-block;
+	width: 50%;
+}
+
+#characters {
+	width: 50%;
+	padding: 10px;
+	margin: auto;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+a {
+	font-size: 30px;
+	text-decoration: none;
+	margin: auto;
+	display: block;
+	font-family: "Arial Black", Gadget, sans-serif;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+div {
+	width: 100%;
+	padding-right: 50px;
+	text-align: center;
+}
+
+#homeButton {
+	width: 100%;
+	font-size: 30;
+	font-family: "Arial Black", Gadget, sans-serif;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#battle-div {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	background-color: gray;
+}
+
+#battle-div > p {
+	display: inline;
+	padding: 10px;
+}
+
+#battle-div > input {
+	width: 50px;
+	padding: 10px;
+	margin: auto;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#battle-div > #name {
+	color: #990000;
+}
+
+#battle-div > #removeCharacter {
+	width: 200px;
+	padding: 10px;
+}
+
+h2 {
+	font-size: 60px;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+p {
+	font-size: 24 px;
+	font-family: "Arial Black", Gadget, sans-serif;
+
+}
+
+label {		
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 20px;
+}
