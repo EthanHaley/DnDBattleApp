@@ -35,6 +35,7 @@ function loadIndex() {
         	event.preventDefault()
         	showForm();
         }
+
         var battleButton = document.createElement('input');
         battleButton.value = 'Battle';
         battleButton.type = 'submit';
@@ -45,7 +46,7 @@ function loadIndex() {
         	battle(characters);
         }
       } else {
-        console.log('Error: ' + xhr.status); // An error occurred during the request.
+        console.log('Error: ' + xhr.status); 
       }
     }
   }
@@ -62,7 +63,6 @@ function loadCharacter(url) {
 		if(xhr.readyState === DONE) {
 			if(xhr.status === OK) {
 				$('body').empty();
-				//console.log(xhr.responseText);
 				var character = JSON.parse(xhr.responseText);
 				var wrapper = document.createElement('div');
 				wrapper.id = "character-div";
@@ -116,15 +116,7 @@ function loadCharacter(url) {
 		        	event.preventDefault()
 		        	deleteCharacter(character);
 		        }
-		        var homeButton = document.createElement('input');
-		        homeButton.value = 'Home';
-		        homeButton.type = 'submit';
-		        homeButton.id = 'homeButton';
-		        $('body').append(homeButton);
-		        homeButton.onclick = function(event) {
-		        	event.preventDefault()
-		        	loadIndex();
-		        }
+		        homeButton();
 			} else {
 				console.log('Error: ' + xhr.status);
 			}
@@ -202,15 +194,7 @@ function battle(characters) {
     		}
     	}
     }
-    var homeButton = document.createElement('input');
-    homeButton.value = 'Home';
-    homeButton.type = 'submit';
-    homeButton.id = 'homeButton';
-    $('body').append(homeButton);
-    homeButton.onclick = function(event) {
-    	event.preventDefault()
-    	loadIndex();
-    }
+    homeButton();
 }
 
 function addCharacter(character) {
@@ -225,11 +209,11 @@ function addCharacter(character) {
 	var removeCharacter = document.createElement('input');
 
 	wrapper.id = "battle-div";
-	hpLabel.innerHTML = "Hit Points ";
 	name.innerHTML = character.name;
 	name.id = "name";
 	ac.innerHTML = "AC " + character.ac;
 	speed.innerHTML = "Speed " + character.speed;
+	hpLabel.innerHTML = "Hit Points ";
 	hpMax.type = 'number';
 	hpMax.value = character.hpMax;
 	hpMax.text = "Hit Points ";
@@ -268,6 +252,18 @@ function addCharacter(character) {
     	document.body.removeChild(wrapper);
     }
 	document.body.appendChild(wrapper);
+}
+
+function homeButton() {
+	var homeButton = document.createElement('input');
+    homeButton.value = 'Home';
+    homeButton.type = 'submit';
+    homeButton.id = 'homeButton';
+    $('body').append(homeButton);
+    homeButton.onclick = function(event) {
+    	event.preventDefault()
+    	loadIndex();
+    }
 }
 
 loadIndex();
