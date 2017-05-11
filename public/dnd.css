@@ -29,41 +29,46 @@ input {
 }
 
 #str {
-	width: 50%;
+	width: 30%;
 	display: inline-block;
 }
 
 #dex {
 	display: inline-block;
-	width: 50%;
+	width: 30%;
 }
 #con {
 	display: inline-block;
-	width: 50%;
+	width: 30%;
 }
 #int {
 	display: inline-block;
-	width: 50%;
+	width: 30%;
 }
 #wis {
 	display: inline-block;
-	width: 50%;
+	width: 30%;
 }
 #char {
 	display: inline-block;
-	width: 50%;
+	width: 30%;
 }
 #ac {
 	display: inline-block;
-	width: 50%;
+	width: 30%;
 }
 #speed {
 	display: inline-block;
-	width: 50%;
+	width: 30%;
 }
 #hpMax {
 	display: inline-block;
-	width: 50%;
+	width: 30%;
+}
+
+#submit-button {
+	padding: 10px;
+	margin: 10px;
 }
 
 #characters {
@@ -128,7 +133,17 @@ div {
 #battle-div > #removeCharacter {
 	width: 200px;
 	padding: 10px;
+}
+
+#removeCharacter {
 	float: right;
+}
+
+#character-div {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
 }
 
 h2 {

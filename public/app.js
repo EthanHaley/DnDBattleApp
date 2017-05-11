@@ -172,7 +172,7 @@ function deleteCharacter(character) {
 
 function battle(characters) {
 	$('body').empty();
-	
+
 	var select = document.createElement('select');
 	select.id = "characters";
 	$.each(characters, function(index, value) {
@@ -195,6 +195,15 @@ function battle(characters) {
     			addCharacter(characters[character]);
     		}
     	}
+    }
+    var startButton = document.createElement('input');
+    startButton.value = 'Start';
+    startButton.type = 'submit';
+    startButton.id = 'startButton';
+    $('body').append(startButton);
+    startButton.onclick = function(event) {
+    	event.preventDefault()
+
     }
     homeButton();
 }
